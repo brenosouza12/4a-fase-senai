@@ -1,17 +1,15 @@
 import './App.css'
-import Contents from './components/Contents'
-import Navbar from './components/Navbar'
+import Home from './pages/Home'
 
 function App() {
 
   return (
 
-    <>
+    <div className='app-container'>
 
-      <Navbar />
-      <Contents />
+    <Home/>
 
-    </>
+    </div>
 
   )
 

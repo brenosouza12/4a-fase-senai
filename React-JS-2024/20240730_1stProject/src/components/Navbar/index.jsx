@@ -7,7 +7,7 @@ function Navbar() {
 
     <div className='navbar-container'>
 
-       <h1>VR-12 Series</h1>
+       <h1>Taylor Swift</h1>
 
     </div>
 
