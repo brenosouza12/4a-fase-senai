@@ -6,11 +6,6 @@ function Body() {
 
     <div className='body-container'>
 
-        <img src="./images/farmarcia-placa.PNG.png" alt="" />
-      
-
-         <p className='textBody'>Essa é a nossa placa, criada a partir do nosso nome.</p>
-
     </div>
 
   )
