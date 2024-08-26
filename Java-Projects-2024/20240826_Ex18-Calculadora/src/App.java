@@ -16,13 +16,8 @@ public class App {
 
             case 1: 
 
-            System.out.println("Soma");
-            System.out.println("Digite o primeiro número: ");
-             x = scanner.nextFloat();
-            System.out.println("Digite o segundo número: ");
-            y = scanner.nextFloat();
-            res = calc.adicionarNumeros(x, y);
-            System.out.println("O resultado da soma é: " + res);
+            calc.adicionarNumeros();
+            
             break;
 
             case 2:

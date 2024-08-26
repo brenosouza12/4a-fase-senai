@@ -1,8 +1,23 @@
+import java.util.Scanner;
+
 public class Calculadora {
 
-    public float adicionarNumeros(float a,float b){
+    public void adicionarNumeros(){
 
-        return (a + b);
+        float x = 0, y = 0, res = 0;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Soma");
+            System.out.println("Digite o primeiro número: ");
+             x = scanner.nextFloat();
+            System.out.println("Digite o segundo número: ");
+            y = scanner.nextFloat();
+            res = x + y;
+            System.out.println("O resultado da soma é: " + res);
+            
+          scanner.close();
+
 
     }
 
