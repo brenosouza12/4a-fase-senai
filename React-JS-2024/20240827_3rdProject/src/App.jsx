@@ -60,10 +60,10 @@ function App() {
             Idade: {inputIdade}
             </p>
 
-          <p>
+          <div className='usuarios'>
 
             Usuarios:{usuarios.map((usuario,index)=>(
-              <div key={usuario.id}>
+              <div key={usuario.id} className='usuario-container'>
 
                 <p>{usuario.nome}</p>
                 <p>{usuario.idade}</p>
@@ -71,7 +71,7 @@ function App() {
               </div>
               
             ))}
-          </p>
+          </div>
             
         </div>
     </>
