@@ -73,6 +73,16 @@ public class App {
             System.out.println("O resultado da fatorial é: " + res);
             break;
 
+            case 7:
+
+            calc.contaPalavras();
+            break;
+
+            case 8: 
+
+            calc.converterNumero();
+            break;
+
             default:
 
             System.out.println("Opcao invalida");

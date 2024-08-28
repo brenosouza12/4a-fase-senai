@@ -37,9 +37,19 @@ public class Calculadora {
 
         float divisao = 0;
 
-        if (b!=0)
+        try {
 
-         divisao = a / b;
+            divisao = a / b;
+
+        } catch (Exception e) {
+
+            System.out.println("Valor Invalido");
+
+        } finally {
+
+            System.out.println("Programa encerrado");
+
+        }
 
          return divisao;
 
@@ -67,5 +77,48 @@ public class Calculadora {
         return (f);
         
     }
+
+    public void contaPalavras(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite uma frase: ");
+        String frase = scanner.nextLine();
+
+        String [] palavras = frase.trim().split("\\s+");
+
+        int numeroDePalavras = palavras.length;
+
+        System.out.println("Numero de palavras na frase: " + numeroDePalavras);
+
+        scanner.close();
+
+    }
+
+    public void converterNumero(){
+
+        Scanner scanner =  new Scanner(System.in);
+
+        System.out.println("Digite um número inteiro positivo: ");
+        int numero = scanner.nextInt();
+
+        if (numero < 0) {
+
+            System.out.println("Erro: O número deve ser positivo.");
+            
+        }else {
+
+            System.out.println("Valor em decimal: " + numero);
+            System.out.println("Valor em hexadecimal: " + Integer.toHexString(numero));
+            System.out.println("Valor em octal: " + Integer.toOctalString(numero));
+            System.out.println("Valor convertido em caractere: " + (char) numero);
+
+        }
+
+        scanner.close();
+
+    }
+
+
 
 }
