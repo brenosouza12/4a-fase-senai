@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../components/Title";
 import Onibus from "../components/Onibus";
+import './Portifolio.css'
 
 function Portifolio() {
   const buzoes = [
@@ -150,9 +151,13 @@ function Portifolio() {
     <div>
       <Title text={"Portifolio"} />
       <p>Estamos na pagina de Portifólio</p>
-      {buzoes.map((onibus) => (
-        <Onibus onibus={onibus} key={onibus.id} />
-      ))}
+      <div className="buzoes">
+
+        {buzoes.map((onibus) => (
+          <Onibus onibus={onibus} key={onibus.id} />
+        ))}
+
+      </div>
     </div>
   );
 }

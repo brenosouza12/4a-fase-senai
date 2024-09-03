@@ -1,11 +1,11 @@
 import React from "react";
-
+import './Onibus.css'
 function Onibus(props) {
 
-    let onibus =  props.onibus
+    let onibus = props.onibus
 
   return (
-    <div>
+    <div className="onibus-container">
       <h2>{onibus.carroceria}</h2>
       <p>{onibus.chassi}</p>
       <p>{onibus.ano}</p>
