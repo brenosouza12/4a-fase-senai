@@ -2,7 +2,8 @@ package fourthproject.fourthproject.repository;
 
 import fourthproject.fourthproject.model.Profissao;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ProfissaoRepository extends JpaRepository <Profissao, Integer>{
-
+@Repository
+public interface ProfissaoRepository extends JpaRepository<Profissao, Long> {
 }

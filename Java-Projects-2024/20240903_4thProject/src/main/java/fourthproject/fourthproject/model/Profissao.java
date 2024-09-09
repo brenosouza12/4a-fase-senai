@@ -4,29 +4,32 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Column;
 
 @Entity
 public class Profissao {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idProfissao;
-
+    private Long id;
+    @Column(nullable = false)
     private String nome;
 
+    // Construtor vazio (obrigatório para o JPA)
     public Profissao() {
     }
 
+    // Construtor com parâmetros
     public Profissao(String nome) {
         this.nome = nome;
     }
 
-    public int getIdProfissao() {
-        return idProfissao;
+    // Getters e Setters
+    public Long getId() {
+        return id;
     }
 
-    public void setIdProfissao(int idProfissao) {
-        this.idProfissao = idProfissao;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -35,5 +38,13 @@ public class Profissao {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    @Override
+    public String toString() {
+        return "Profissao{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                '}';
     }
 }
