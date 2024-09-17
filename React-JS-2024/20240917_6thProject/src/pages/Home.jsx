@@ -4,6 +4,17 @@ import { GlobalContext } from '../contexts/GlobalContext'
 
 function Home() {
     const { usuarioLogado, usuarios, setUsuarios } = useContext(GlobalContext)
+
+    function adicionarUsuario(){
+
+        let usuario = {
+
+            id: Date.now(),
+            nome: "Alice Bell",
+            email: "aliceB23@gmail.com"
+        }
+        setUsuarios({...usuarios,usuario})
+    }
     return (
         <div>
             <Navbar />
@@ -20,6 +31,10 @@ function Home() {
                         </div>
                     ))
                 }
+            </div>
+
+            <div>
+                <button onClick={adicionarUsuario}>Adicionar Usuario</button>
             </div>
         </div>
 
