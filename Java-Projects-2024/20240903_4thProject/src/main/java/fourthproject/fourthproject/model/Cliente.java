@@ -12,16 +12,20 @@ public class Cliente {
     private Long id;
 
     @Column(nullable = false, length = 60)
+    @NotNull
     private String nome;
 
     @Column(nullable = false, unique = true, length = 11)
+    @NotNull
+    @Size(min = 11, max = 11)
     private String cpf;
 
     @Column(name = "data_nascimento", nullable = false)
+    @NotNull
     private LocalDate dataNascimento;
 
-    @ManyToOne
-    @JoinColumn(name = "fk_id_profissao", nullable = false)
+    @Column(name = "fk_id_profissao", nullable = false)
+    @NotNull
     private int fk_id_profissao;
 
     // Construtor vazio
@@ -69,11 +73,11 @@ public class Cliente {
         this.dataNascimento = dataNascimento;
     }
 
-    public int getfk_id_profissao() {
+    public int getFk_id_profissao() {
         return fk_id_profissao;
     }
 
-    public void setfk_id_profissao(int fk_id_profissao) {
+    public void setFk_id_profissao(int fk_id_profissao) {
         this.fk_id_profissao = fk_id_profissao;
     }
 
@@ -88,4 +92,3 @@ public class Cliente {
                 '}';
     }
 }
-
