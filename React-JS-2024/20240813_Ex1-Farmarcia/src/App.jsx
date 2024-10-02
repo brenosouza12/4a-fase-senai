@@ -1,22 +1,14 @@
-import './App.css'
-import Body from './components/Body/Body'
-import Header from './components/Header/Header'
+import './App.css';
+import Body from './components/Body/Body';
+import Header from './components/Header/Header';
 
 function App() {
-
   return (
-
-    <>
-
-      <Header/>
-      <Body/>
-      
-    </>
-
-  )
- 
-  
+    <div className="app-container">
+      <Header />
+      <Body />
+    </div>
+  );
 }
 
-
-export default App
+export default App;
