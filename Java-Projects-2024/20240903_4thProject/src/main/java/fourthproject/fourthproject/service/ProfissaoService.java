@@ -18,7 +18,7 @@ public class ProfissaoService {
         return profissaoRepository.findAll();
     }
 
-    public Profissao getProfissaoById(Long id) {
+    public Profissao getProfissaoById(int id) {
         Optional<Profissao> profissao = profissaoRepository.findById(id);
         return profissao.orElse(null);
     }
@@ -29,7 +29,7 @@ public class ProfissaoService {
     }
 
     @Transactional
-    public Profissao updateProfissao(Long id, Profissao updatedProfissao) {
+    public Profissao updateProfissao(int id, Profissao updatedProfissao) {
         Optional<Profissao> existingProfissao = profissaoRepository.findById(id);
         if (existingProfissao.isPresent()) {
             Profissao profissao = existingProfissao.get();
@@ -40,7 +40,7 @@ public class ProfissaoService {
     }
 
     @Transactional
-    public boolean deleteProfissao(Long id) {
+    public boolean deleteProfissao(int id) {
         Optional<Profissao> existingProfissao = profissaoRepository.findById(id);
         if (existingProfissao.isPresent()) {
             profissaoRepository.deleteById(id);

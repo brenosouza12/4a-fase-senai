@@ -9,31 +9,27 @@ public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column(nullable = false, length = 60)
-    @NotNull
     private String nome;
 
     @Column(nullable = false, unique = true, length = 11)
-    @NotNull
-    @Size(min = 11, max = 11)
     private String cpf;
 
     @Column(name = "data_nascimento", nullable = false)
-    @NotNull
     private LocalDate dataNascimento;
 
-    @Column(name = "fk_id_profissao", nullable = false)
-    @NotNull
-    private int fk_id_profissao;
+    @ManyToOne
+    @JoinColumn(name = "fk_id_profissao", nullable = false)
+    private Long fk_id_profissao;
 
     // Construtor vazio
     public Cliente() {
     }
 
     // Construtor com parâmetros
-    public Cliente(String nome, String cpf, LocalDate dataNascimento, int fk_id_profissao) {
+    public Cliente(String nome, String cpf, LocalDate dataNascimento, Long fk_id_profissao) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
@@ -41,11 +37,11 @@ public class Cliente {
     }
 
     // Getters e Setters
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -73,11 +69,11 @@ public class Cliente {
         this.dataNascimento = dataNascimento;
     }
 
-    public int getFk_id_profissao() {
+    public Long getfk_id_profissao() {
         return fk_id_profissao;
     }
 
-    public void setFk_id_profissao(int fk_id_profissao) {
+    public void setfk_id_profissao(Long fk_id_profissao) {
         this.fk_id_profissao = fk_id_profissao;
     }
 
@@ -92,3 +88,4 @@ public class Cliente {
                 '}';
     }
 }
+

@@ -18,7 +18,7 @@ public class ProfissaoController {
     }
 
     @GetMapping("/{id}")
-    public Profissao getProfissaoById(@PathVariable Long id) {
+    public Profissao getProfissaoById(@PathVariable int id) {
         return profissaoService.getProfissaoById(id);
     }
 
@@ -28,12 +28,12 @@ public class ProfissaoController {
     }
 
     @PutMapping("/{id}")
-    public Profissao updateProfissao(@PathVariable Long id, @RequestBody Profissao profissao) {
+    public Profissao updateProfissao(@PathVariable int id, @RequestBody Profissao profissao) {
         return profissaoService.updateProfissao(id, profissao);
     }
 
     @DeleteMapping("/{id}")
-    public boolean deleteProfissao(@PathVariable Long id) {
+    public boolean deleteProfissao(@PathVariable int id) {
         return profissaoService.deleteProfissao(id);
     }
 }
