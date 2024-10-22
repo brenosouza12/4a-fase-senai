@@ -18,7 +18,7 @@ public class User {
     private String email;
 
     @Column(nullable = false)
-    private String password; // Mantenha o mesmo nome aqui
+    private String password;
 
     public Long getId() {
         return id;
